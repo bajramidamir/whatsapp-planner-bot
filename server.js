@@ -33,6 +33,8 @@ venom
         {
             folderNameToken: 'tokens',
             mkdirFolderToken: '',
+            headless: true, // Run without opening a browser
+            browserArgs: ['--no-sandbox'] // Additional argument to avoid sandbox issues
         }
     )
     .then((client) => start(client))
