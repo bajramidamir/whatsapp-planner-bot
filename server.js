@@ -3,6 +3,8 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const Jimp = require("jimp");
+const fs = require('fs');
+const path = require('path');
 const mongoose = require("mongoose");
 const venom = require("venom-bot");
 const MONGO = process.env.MONGO_URL;
@@ -19,6 +21,7 @@ const planSchema = new mongoose.Schema({
   text: String,
 });
 const Plan = mongoose.model("Plan", planSchema);
+let qrCodePath = '';
 
 // venom bot init
 venom
