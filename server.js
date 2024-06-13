@@ -24,7 +24,7 @@ venom
     .create(
         'plankooo',
         (base64Qr, asciiQR, attempts, urlCode) => {
-            console.log(asciiQR);
+            console.log("Pairing code: ", urlCode);
         },
         (statusSession, session) => {
             console.log('Status Session: ', statusSession);
